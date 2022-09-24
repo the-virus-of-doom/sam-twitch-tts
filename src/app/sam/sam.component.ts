@@ -19,7 +19,6 @@ export class SamComponent implements OnInit {
     this.samIsSpeaking = true;
     console.log(wordsToSpeak);
     this.samLogs.push(wordsToSpeak);
-    // this.samLogs.push(new Date().toString());
 
     // TODO: implement sam speaking here
     setTimeout(() => {

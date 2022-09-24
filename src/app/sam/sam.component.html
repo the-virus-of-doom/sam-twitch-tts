@@ -1,0 +1,26 @@
+<h4>SAM</h4>
+<label>SAM Input</label>
+<input 
+    type="text"
+    class="form-control"
+    [(ngModel)]="samInputText">
+    <br>
+<!-- <p>{{ samInputText }}</p> -->
+<button 
+    type="button"
+    class="btn btn-primary"
+    (click)="onSpeak(samInputText)"
+    [disabled]="samIsSpeaking">
+    Speak
+</button>
+<br>
+
+<label *ngIf="samLogs.length > 0">SAM Logs:</label>
+
+<ul *ngIf="samLogs.length > 0">
+    <app-sam-logs 
+    *ngFor="let log of samLogs; let i = index"
+    [logText]="samLogs[i]"></app-sam-logs>
+</ul>
+
+
